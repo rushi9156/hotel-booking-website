@@ -9,15 +9,35 @@
     <body>
         <section>
             <div class="header">
-                <img src="assests/images/logo.png" height="200" width="150" alt="logo" >
+            <a href="index.html"><img src ="assests/images/logo.png" height="200" width="150" alt="logo"></a>
                 <a href="login.html"> Login </a>
             </div>
             
             <div class="content">
+             
                 
             <div>
                    <a href="payment.html" target="_blank"><img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"></a><br>
-                   <a href="payment.html">Book Now</a>
+               
+                   <form
+                   autocomplete="off"
+                   action="payment.html"
+                   method="GET"
+                   target="_self"
+                   >
+                   <label>Adults:</label>
+                   <input type="number" name="adult" min="1" step="1" required /><br />
+                   <label>Name:</label>
+                   <input type="text" name="name" required /><br />
+                   <label>From Date:</label>
+                   <input type="date" name="fromDate" required/><br />
+                   <label>To Date:</label>
+                   <input type="date" name="toDate" required /><br />
+                   <label>Total:</label>
+                   <input type="text" name="price" readonly /><br />
+                    <button>Book Now</button>             
+                </form>
+                
             </div>
              <h1>
                       Radisson Blu Hotel
@@ -34,8 +54,9 @@
            <h5>DESCRIPTION</h5>
            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum in felis nec auctor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet lectus eleifend, </P>
 </div>
+</section>
 <footer>
-    <a href="#">Contact Us</a>
+    <a href="/contact.html">Contact Us</a>
     <div>
         <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png"  width=22 height="20"></a>
         <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" width=22 height="20"></a>
@@ -43,6 +64,5 @@
 </div>
 <P class="copyright">&#169 2020 ROOM SEARCH PVT LTD</P>
 </footer> 
-        </section>
     </body>
 </html>
