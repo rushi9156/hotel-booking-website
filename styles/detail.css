@@ -1,16 +1,50 @@
-html {
-    scroll-behavior: smooth;
-  }
+html,body {
+  scroll-behavior: smooth;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  background-color:#e0e0e0;}
 .container {
     max-width: 100%;
     max-height: 100%;
+  
+    
 }
 
 .header img {
     height: 60px;
     width: 60px;
     }
-  .content img {
+  
+   
+   #img-one{
         width:500px;
         height: 500px;
+        margin-top: 2%;
+        margin-left: 4%;
+        margin-right: 4%; 
     }
+    #form {
+    position: relative;
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%; 
+    margin-bottom: 1%;
+}
+.description{
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%; 
+    margin-bottom: 1%;
+}
+
+    
+.header{
+background-color:rosybrown;
+}
+footer{
+background-color:rosybrown;
+margin-top:50px;
+}

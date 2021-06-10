@@ -1,16 +1,30 @@
-html {
+html,body {
     scroll-behavior: smooth;
-  }
-.container {
-    max-width: 100%;
-    max-height: 100%;
-}
-.header img {
-    height: 60px;
-    width: 60px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    background-color:#e0e0e0;
+        
+      }
+    .container {
+        max-width: 100%;
+        max-height: 100%;
     }
-  
-.content img {
-    width:250px;
-    height: 200px;
-}
+    .header img {
+        height: 60px;
+        width: 60px;
+        }
+      
+    .content img {
+        width:250px;
+        height: 200px;
+    }
+    
+    .card img,.card-one{
+    margin: 4%;
+    background-color:rgb(132,136,139);
+    width: 40%;
+    height: auto;
+    }
