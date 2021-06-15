@@ -1,8 +1,7 @@
-
 html,
 body {
 margin: 0;
-height: auto;
+padding: 0;
 width: 100%;
 font-family: Ubuntu ,sans-serif;font-size: 22px;
 
@@ -13,7 +12,6 @@ min-height: cacl(100vh- 63px - 63px);
 .container{
 width: 100%;
 position:relative;
-height: 100%;
 
 }
 .header img {
@@ -35,17 +33,15 @@ height:20px;
 background-color:rosybrown;
 width: 100%;
 height:63px;
-
+position: fixed;
 }
 footer{
 background-color:rosybrown;
 margin-top: 260px;
 width: 100%;
 height: 63px;
-position:absolute;
-
-
-
+position:sticky;
+bottom:0px;
 }
 .content{
 background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
@@ -53,45 +49,77 @@ background-position: center;
 background-repeat: no-repeat;
 background-size:cover;
 height: 380px;
+
 }
 .city-images-card{
 margin-left: 15%;
 margin-right: 15%;
-padding-top: 360px;
+padding-top: 390px;
+justify-content: center;
+
 }
 .social-media-icon{
-  margin-top:0%;
-  padding-left: 92%;
-  width:10%;
-  display:bloc
-
+  margin-top:1.5%;
+  float: right;
+  margin-right:10px;
 } 
 
-.search{
-  margin-left: 50%;
-  margin-top: 10%;
-  position: absolute;
-}
-form.example input[type=text] {
-  margin-left: -200px;
-  margin-right: auto;
-  padding: 6px;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-radius:8px;
-  width: 300px;
-  background: #f1f1f1;
-  -webkit-border-radius:8px;
-  -moz-border-radius:8px;
-  -ms-border-radius:8px;
-  -o-border-radius:8px;
-}
-footer #c1{
 
+ 
+footer #c1{
 color:black;
 text-decoration: none;
-width: 10%;
-
+position: absolute;
+top: 15px;
+left: 15px;
 }
 
+footer p{
+  color:black;
+  text-decoration: none;
+  position: absolute;
+  top: 25px;
+  left:42%;
+  font-size: medium;
 
+  }
+.content #viewmore{
+  margin-left:45%;
+text-decoration: none;
+}                       
+footer{
+position:sticky;
+   bottom:0px;
+   width:100%;
+  }
+
+
+
+.content #search{
+   position: absolute;
+   top: 36%;
+   left: 51%;
+
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+}
+input {
+  padding: 8px 10px;
+  border: 0;
+  font-size: 16px;
+  border-radius:12px;
+  -webkit-border-radius:12px;
+  -moz-border-radius:12px;
+  -ms-border-radius:12px;
+  -o-border-radius:12px;
+  border: 1px solid white;
+  background-color:#f1f1f1;
+  width:100%;  
+
+}
+#search{
+width:390px;  
+}
