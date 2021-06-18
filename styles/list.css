@@ -9,16 +9,14 @@ font-family: Ubuntu ,sans-serif;font-size: 22px;
 background-color:#e0e0e0;
 
 }
-main{
-    height: auto;
 
-    }
 
     
 .container {
     width: 100%;
+    height: 100%;
     position:relative;
-    height: auto;
+    
 
     }
     .header img {
@@ -33,34 +31,39 @@ height: 200px;
     }
     
 .card img,.card-one{
-    margin: 3%;
+    margin: 5%;
+    margin-bottom: 0%;
     background-color:rgb(132,136,139);
     width: 40%;
-
+    height: 200px;}
+    
    
-    }
 
     .social-media-icon img{
         width:22px;
         height:20px;
         }
 
-        .header{
-            background-color:rosybrown;
-            width: 100%;
-            height:63px;
-            position: fixed;
-            top:0px;
-            
-            }
-            footer{
+      
+            .header{
                 background-color:rosybrown;
                 width: 100%;
-                height: 63px;
-                position:sticky;
-                bottom:0px;
+                height:63px;
+                position: sticky;
+                display: flex;
+                flex-direction: row;
                 }
-               
+            
+            
+                footer{
+                    background-color:rosybrown;
+                    margin-top: 260px;
+                    width: 100%;
+                    height: 63px;
+                    position:sticky;
+                    bottom:0px;
+                    
+                    }
              
                
                .content li{
@@ -68,9 +71,8 @@ height: 200px;
                   padding: 2%;
               }
               .content ul{
-                margin-top: 5%;
-                margin-left: 36%;
-                margin-top: 6%;
+                margin-top: 2%;
+                margin-left: 38%;
 
               }
               .content li a{
@@ -99,7 +101,7 @@ footer #c1{
         text-decoration: none;
         position: absolute;
         top: 25px;
-        left:42%;
+        left:27%;
         font-size: medium;
       
         }
@@ -107,6 +109,7 @@ footer #c1{
     display:flex;
     flex-wrap: wrap;
     justify-content: left;
+
 }
 .content,h1{
     font-size: 20px;
@@ -119,3 +122,18 @@ footer #c1{
     text-decoration: none;
     color:black
 }
+.card-one,.two,.three{
+    display: flex;
+    align-items:stretch;
+}
+.card-one h1,p{
+    margin-left: 15%;
+}
+main{
+height: 80%;
+}
+.card-one{
+margin-top: 1%;
+margin-bottom: 4%;
+}
+

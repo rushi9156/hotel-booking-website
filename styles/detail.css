@@ -1,5 +1,5 @@
 html,body {
-  margin: 0;
+margin: 0;
 height:0;
 padding: 0;
 height: 100%;
@@ -7,40 +7,30 @@ width: 100%;
 font-family: Ubuntu ,sans-serif;
 background-color:#e0e0e0;
 }
-  .container {
-      
+.container {
     width: 100%;
     position:relative;
-    height: auto;
-      
-  }
+    height: auto;}
   
   main{
     height: auto;
-
-    }
+  }
   .header img {
       height: 60px;
       width: 60px;
       }
     
-     
      #img-one{
           width:500px;
-          height: 500px;
-          margin-top: 2%;
-          margin-left: 4%;
+          height: 400px;
+          padding-bottom: 2%;
+          margin-left: 12%;
           margin-right: 4%; 
+          margin-top:20px;
       }
-      #form {
-      position: relative;
-      margin-top: 2%;
-      margin-left: 4%;
-      margin-right: 4%; 
-      margin-bottom: 1%;
-  }
+   
   .description{
-      margin-top: 2%;
+      margin-top: 6%;
       margin-left: 4%;
       margin-right: 4%; 
       margin-bottom: 1%;
@@ -51,15 +41,21 @@ background-color:#e0e0e0;
     background-color:rosybrown;
     width: 100%;
     height:63px;
-    position: fixed;
-    top:0px;}
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+
+    }
     footer{
-        background-color:rosybrown;
-        width: 100%;
-        height: 63px;
-        position:sticky;
-        bottom:0px;
-        }
+    background-color:rosybrown;
+    margin-top: 260px;
+    width: 100%;
+    height: 63px;
+    position:sticky;
+    bottom:0px;
+    
+    }
 
         .social-media-icon{
             margin-top:1.5%;
@@ -80,10 +76,56 @@ background-color:#e0e0e0;
                 position: absolute;
                 top: 25px;
                 left:42%;
-                font-size: medium;
-              
-                }
+                font-size: medium;}
 
-                #img-one{
-                  margin-top: 100px;
-                }
+                
+.box1 .form{
+display:flex;
+height:450px;
+flex-direction: column;
+margin-left: 4%;
+margin-right: 4%; 
+justify-content: space-between;
+border: 1px solid black; 
+width:400px;
+padding-left:5%;
+border-right:none;
+border-bottom: none;
+}
+
+.form{
+  position:absolute;
+  top:8.9%;
+  left:56.2%;
+}
+
+
+
+label {
+  display: inline-block;
+  width: 140px;
+}
+input {
+  margin-top: 10%;
+  margin-bottom:15px;
+  display:inline-block; 
+  display: inline; }
+  input[type="date"]{
+  width: 50%;
+}
+.box1{
+width:96%;
+margin-top: 4%;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid black; 
+}
+
+button{
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 36%;
+  cursor: pointer;
+}
