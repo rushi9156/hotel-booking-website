@@ -4,16 +4,18 @@ height:0;
 padding: 0;
 height: 100%;
 width: 100%;
-font-family: Ubuntu ,sans-serif;
-background-color:#e0e0e0;
+font-family: Ubuntu ,sans-serif;font-size: 15px;
+
 }
-.container {
+.con {
     width: 100%;
     position:relative;
     height: auto;}
   
   main{
-    height: auto;
+    min-height: cacl(100vh- 63px - 63px);
+
+
   }
   .header img {
       height: 60px;
@@ -81,51 +83,82 @@ background-color:#e0e0e0;
                 
 .box1 .form{
 display:flex;
-height:450px;
+height:421px;
 flex-direction: column;
 margin-left: 4%;
 margin-right: 4%; 
 justify-content: space-between;
-border: 1px solid black; 
 width:400px;
 padding-left:5%;
+border-top: none;
 border-right:none;
 border-bottom: none;
 }
 
 .form{
   position:absolute;
-  top:8.9%;
-  left:56.2%;
+  top:8.79%;
+  left:62%;
+  padding-top: 2%;
+
 }
 
 
 
-label {
+.form label{
   display: inline-block;
   width: 140px;
+  padding:5%;
 }
 input {
   margin-top: 10%;
   margin-bottom:15px;
-  display:inline-block; 
-  display: inline; }
+display: inline;  
+ }
   input[type="date"]{
-  width: 50%;
+  width: 55%;
 }
 .box1{
+  display : table;
+
 width:96%;
 margin-top: 4%;
 margin-left: auto;
 margin-right: auto;
 border: 1px solid black; 
+
 }
 
-button{
-  padding: 5px 5px;
-  text-align: center;
+
+.form .btn-outline-success{
   text-decoration: none;
-  display: inline-block;
-  margin: 4px 36%;
   cursor: pointer;
+  margin-left:144px;
+  
+
 }
+.box1:after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 1px;
+  top:8.85%;
+  height: 421px;
+  left: 66%;
+}
+.btn-light
+ 
+{
+ height: 40px;
+ margin-top: 10px;
+ }
+ #login-button{
+   margin-left: 88%;
+ }
+ .btn-info{
+    color:black;
+    text-decoration: none;
+    position: absolute;
+    top: 15px;
+    left: 30px; }
+   

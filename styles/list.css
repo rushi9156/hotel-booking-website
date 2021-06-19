@@ -5,20 +5,23 @@ height:0;
 padding: 0;
 height: 100%;
 width: 100%;
-font-family: Ubuntu ,sans-serif;font-size: 22px;
-background-color:#e0e0e0;
+font-family: Ubuntu ,sans-serif;font-size: 15px;
 
 }
 
 
-    
+main{
+    min-height: cacl(100vh- 63px - 63px);
+    margin-bottom: -20%;
+
+    }
 .container {
     width: 100%;
-    height: 100%;
     position:relative;
     
 
     }
+  
     .header img {
         height: 60px;
         width: 60px;
@@ -29,13 +32,23 @@ width:250px;
 height: 200px;
 
     }
-    
+    .cards a{
+        width:250px;
+        
+    }
 .card img,.card-one{
     margin: 5%;
     margin-bottom: 0%;
-    background-color:rgb(132,136,139);
+    background-color: lightgrey;
     width: 40%;
     height: 200px;}
+
+
+.card-one h1{
+    margin-top:10%;
+    font-size:20px;
+    font-weight: bolder;
+}
     
    
 
@@ -61,20 +74,17 @@ height: 200px;
                     width: 100%;
                     height: 63px;
                     position:sticky;
-                    bottom:0px;
-                    
-                    }
+                    bottom:0px; }
              
                
                .content li{
-                  display:inline;
-                  padding: 2%;
+                  padding-top: 2%;
               }
-              .content ul{
+              /* .content ul{
                 margin-top: 2%;
                 margin-left: 38%;
 
-              }
+              } */
               .content li a{
                   font-size:20px;
                   text-decoration: none;
@@ -101,7 +111,7 @@ footer #c1{
         text-decoration: none;
         position: absolute;
         top: 25px;
-        left:27%;
+        left:42%;
         font-size: medium;
       
         }
@@ -126,14 +136,43 @@ footer #c1{
     display: flex;
     align-items:stretch;
 }
-.card-one h1,p{
-    margin-left: 15%;
-}
-main{
-height: 80%;
-}
+
+
 .card-one{
 margin-top: 1%;
 margin-bottom: 4%;
 }
+#pills-profile img{
+width:75%;
+height:500px;
 
+
+}
+
+.link_change{
+    margin-left:5%;
+}
+.link_change_one{
+    width:300px;
+    margin-left:5%;
+}
+
+.card-one:hover{
+    background-color: rosybrown;
+}
+.btn-light
+ 
+{
+ height: 40px;
+ margin-top: 10px;
+ }
+ #login-button{
+   margin-left: 88%;
+ }
+ .btn-info{
+    color:black;
+    text-decoration: none;
+    position: absolute;
+    top: 15px;
+    left: 30px; }
+   

@@ -3,9 +3,10 @@ html,body {
 height:0;
 padding: 0;
 width: 100%;
-font-family: Ubuntu ,sans-serif;
-background-color:#e0e0e0;}
-.container {
+font-family: Ubuntu ,sans-serif;font-size: 15px;
+
+}
+.con {
   width: 100%;
   position:relative;
 
@@ -25,7 +26,7 @@ background-color:#e0e0e0;}
 
     main{
       min-height: cacl(100vh- 63px - 63px);
-    padding-bottom: 5%;}
+    padding-bottom: 10%;}
          
   .header{
     background-color:rosybrown;
@@ -75,7 +76,7 @@ width: 50%;
 height: 200px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 10%;
+margin-top: 5%;
 margin-bottom: 2%;
 display:flex;
 flex-wrap: nowrap;
