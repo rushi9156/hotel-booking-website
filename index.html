@@ -1,140 +1,115 @@
+<!-- kindly check media queries and responsiveness with mozilla -->
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="/styles/index.css"> 
- <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
-<title>Index</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="/styles/index.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<title>Index</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js">
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="cont">
-<main>
-
-    <div class="header">
-        <img src="assests/images/logo.png" height="200" width="150" alt="logo"   >
-        <div id="login-button">
-        <button type="button" class="btn btn-light btn-sm" data-toggle="modal"
-        data-target="#login-modal">
-        LOGIN
-        </button></div>
-        
-        </div>
-        <div class="content">
-            <div id="search-bar">
-            <form autocomplete="off"> 
-                    <input id="search-input" type="text" placeholder="City"/>
-                </form>
-            </div>
-        <div class="city-images-card">
-         <div class="city-one"> 
-        <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" width="300" height="300"></a>
-        <div class="img__description_layer">
-        <p class="img__description"> <a href="/list.html" style="color: #fff;text-decoration: none;">Delhi</a></p>
-        </div>
-        </div>
-        
-        <div class="city-one"> 
-            <a href="/list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" width="300" height="300"></a>
-            <div class="img__description_layer">
-                <p class="img__description"> <a href="/list.html" style="color: #fff;text-decoration: none;">Goa</a></p>
-            </div> 
-        </div>
-            <div class="city-one"> 
-                <a href="/list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" width="300" height="300"></a>
-                <div class="img__description_layer">
-                    <p class="img__description"> <a href="/list.html" style="color: #fff;text-decoration: none;">Hydrabad</a></p>
-                </div> 
-                </div>
-                <div class="city-one"> 
-                    <a href="/list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" width="300" height="300"><br></a>
-                    <div class="img__description_layer">
-                        <p class="img__description"> <a href="/list.html" style="color: #fff;text-decoration: none;">Kolkata</a></p>
-                    </div></div>
-        </div>
-<div class="viewmoree">
-    <a href="index.html" id="view-more">
-        <button type="button" class="btn btn-secondary">View More</button> </div></a>
-</div>
-
-</main>
-<footer>
-    <div id="contact-us">
-        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contact-us-modal">
-            Contact Us
-        </button>
-    </div> 
-<p>&#169 2020 ROOM SEARCH PVT LTD</p>
-<div class="social-media-icon">
-<a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" width="22" height="20"></a>
-<a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" width="22" height="20"></a>
-<a href="https://www.twitter.com" target="_blank"> <img src="assests/images/twitter.png" width="22" height="20"></a>
-</div>
-</footer> 
-
-</div>
-<!-- Login-Modal -->
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form>
-            <label>Username:</label>&nbsp
-            <input type="text" placeholder="Enter Username" class="form-control" required>
-            <br>
-            <label>Password:</label>&nbsp
-            <input type="password" placeholder="Enter Password" class="form-control" required>
-        </div>
-        <div class="modal-footer justify-content-center">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
-        </div>
-    </form>
-    </div>
-</div>
-</div>
-
-<div class="modal fade" id="contact-us-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                Thank you for reaching out!!!<br>
-                Please enter your email and we will get back to you.
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Enter your email id">
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
-        </div>
-        </form>
-    </div>
-</div>
-</div>
+	<div class="cont">
+		<div class="header">
+			<img alt="logo" height="200" src="assests/images/logo.png" width="150">
+			<div id="login-button">
+				<button class="btn btn-light btn-sm" data-target="#login-modal" data-toggle="modal" type="button">LOGIN</button>
+			</div>
+		</div>
+		<div class="content">
+			<main>
+				<div id="search-bar">
+					<form autocomplete="off">
+						<input id="search-input" placeholder="City" type="text">
+					</form>
+				</div>
+				<div class="city-images-card">
+					<div class="city-one">
+						<a href="list.html"><img height="300" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" width="300"></a>
+						<div class="img__description_layer">
+							<p class="img__description"><a href="/list.html" style="color: #fff;text-decoration: none;">Delhi</a></p>
+						</div>
+					</div>
+					<div class="city-one">
+						<a href="/list.html"><img height="300" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" width="300"></a>
+						<div class="img__description_layer">
+							<p class="img__description"><a href="/list.html" style="color: #fff;text-decoration: none;">Goa</a></p>
+						</div>
+					</div>
+					<div class="city-one">
+						<a href="/list.html"><img height="300" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" width="300"></a>
+						<div class="img__description_layer">
+							<p class="img__description"><a href="/list.html" style="color: #fff;text-decoration: none;">Hydrabad</a></p>
+						</div>
+					</div>
+					<div class="city-one">
+						<a href="/list.html"><img height="300" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" width="300"><br></a>
+						<div class="img__description_layer">
+							<p class="img__description"><a href="/list.html" style="color: #fff;text-decoration: none;">Kolkata</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="viewmoree">
+					<a href="index.html" id="view-more"><button class="btn btn-secondary" type="button">View More</button></a>
+				</div>
+			</main>
+		</div>
+		<footer>
+			<div id="contact-us">
+				<button class="btn btn-info btn-sm" data-target="#contact-us-modal" data-toggle="modal" type="button">Contact Us</button>
+			</div>
+			<p>&#169; 2020 ROOM SEARCH PVT LTD</p>
+			<div class="social-media-icon">
+				<a href="https://www.facebook.com" target="_blank"><img height="20" src="assests/images/facebook.png" width="22"></a> <a href="https://www.instagram.com" target="_blank"><img height="20" src="assests/images/instagram.png" width="22"></a> <a href="https://www.twitter.com" target="_blank"><img height="20" src="assests/images/twitter.png" width="22"></a>
+			</div>
+		</footer>
+	</div>
+	<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="login-modal" role="dialog" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Please Login</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<label>Username:</label>&nbsp; <input class="form-control" placeholder="Enter Username" required="" type="text"><br>
+						<label>Password:</label>&nbsp; <input class="form-control" placeholder="Enter Password" required="" type="password">
+					</form>
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button class="btn btn-primary" data-dismiss="modal" type="button">Login</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="contact-us-modal" role="dialog" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Get in touch</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						Thank you for reaching out!!!<br>
+						Please enter your email and we will get back to you.<br>
+						<br>
+						<label>Email:</label> <input placeholder="Enter your email id" type="email">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
