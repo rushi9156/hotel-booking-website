@@ -96,9 +96,10 @@ input {
 	margin-top: 10%;
 	margin-bottom: 15px;
 	display: inline;
-}
+	border: 1px solid black;}
 input[type="date"] {
 	width: 55%;
+	border: 1px solid black;
 }
 .box1 {
 	display: flex;
@@ -248,9 +249,11 @@ input[type="date"] {
 		margin-top: 10%;
 		margin-bottom: 15px;
 		display: inline;
+		border: 1px solid black;
 	}
 	input[type="date"] {
 		width: 180px;
+		border: 1px solid black;
 	}
 	.box1 {
 		display: flex;
@@ -400,9 +403,11 @@ input[type="date"] {
 		margin-top: 10%;
 		margin-bottom: 15px;
 		display: inline;
+		border: 1px solid black;
 	}
 	input[type="date"] {
 		width: 180px;
+		border: 1px solid black;
 	}
 	.box1 {
 		height: 596px;

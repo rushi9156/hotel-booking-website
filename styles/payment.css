@@ -153,6 +153,7 @@ footer p {
 	}
 	.info strong {
 		font-family: cursive;
+
 	}
 	.header img {
 		height: 60px;
@@ -414,5 +415,6 @@ footer p {
 	}
 	.info strong {
 		font-family: cursive;
+		font-weight:bolder;
 	}
 }
