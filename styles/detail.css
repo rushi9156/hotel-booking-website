@@ -10,12 +10,18 @@ font-family: Ubuntu ,sans-serif;font-size: 15px;
 .con {
     width: 100%;
     position:relative;
-    height: auto;}
+    height: auto;
+    background-color: #e0e0e0;
+  }
   
   main{
     min-height: cacl(100vh- 63px - 63px);
 margin-bottom: -15%;
 
+  }
+  .description strong{
+    font-family: cursive;
+    font-weight: normal;
   }
   .header img {
       height: 60px;
@@ -70,7 +76,8 @@ margin-bottom: -15%;
                 position: absolute;
                 top: 25px;
                 left:42%;
-                font-size: medium;}
+           
+              font-weight: normal;}
 
                 
 .box1 .form{
@@ -171,4 +178,367 @@ display: inline;
      content: '>';
         font-size: 55px;
         color: rosybrown; }
+        .boxx{
+     width: 70%; border-right: 1px solid black;}
+      
+        
+        
+        
+        @media screen and (min-width: 576px) and (max-width: 768px) {
 
+          html,body {
+            margin: 0;
+            height:0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Ubuntu ,sans-serif;font-size: 15px;
+            
+            }
+            .con {
+              height: 100%;
+                position:relative;
+                background-color: #e0e0e0;
+
+               }
+              
+            
+              .header img {
+                  height: 60px;
+                  width: 60px;
+                  }
+ .description{
+                  margin-top: 6%;
+                  margin-left: 4%;
+                  margin-right: 4%; 
+                  margin-bottom: 1%;
+              }
+              
+                  
+              .header{
+                background-color:rosybrown;
+                width: 100%;
+                height:63px;
+                position: sticky;
+                display: flex;
+                flex-direction: row;
+                z-index: 1;
+            
+                }
+                footer{
+                background-color:rosybrown;
+                margin-top: 260px;
+                width: 100%;
+                height: 63px;
+                position: sticky;
+                bottom:0px;
+                
+                }
+            
+                    .social-media-icon{
+                        margin-top:1.5%;
+                        float: right;
+                        margin-right:10px;
+                      } 
+                      footer #c1{
+                        color:black;
+                        text-decoration: none;
+                        position: absolute;
+                        top: 15px;
+                        left: 15px;
+                        }
+                    
+                        footer p{
+                            color:black;
+                            text-decoration: none;
+                            position: absolute;
+                            top: 25px;
+                            left:38%;
+                            font-size: medium;}
+            
+                            
+            .box1 .form{
+            display:flex;
+            height:421px;
+            flex-direction: column;
+            justify-content: space-between;
+            width:350px;
+            padding-left:0%;
+            }
+            #form{
+              width: 600px;
+              height:421px;
+             
+            }
+            .form{
+              position:absolute;
+              top:8%;
+              left:56%;
+              padding-top: 3%;
+            
+            }
+            
+            .boxx{
+              width: 60%;
+            }
+            
+            .form label{
+              display: inline-block;
+              width: 100px;
+              padding:2%;
+            }
+            input {
+              margin-top: 10%;
+              margin-bottom:15px;
+            display: inline;  
+             }
+              input[type="date"]{
+              width:180px;
+            }
+            
+            .box1{
+              display: flex;
+              height:350px;
+              border:1px solid black;
+              width:98%;
+              margin-left: 2%;
+              margin-top:2%;
+            
+              }
+              .content img{
+                
+                  width: 450px;
+                  max-height: 800px;
+                  margin: 0% 0% 0% ;
+                
+              }
+            .content img{
+                flex-grow:0;
+                flex-shrink:0;
+                }
+              .carousel-item{
+                text-align: center;
+                }
+            .form .btn-outline-success{
+              text-decoration: none;
+              cursor: pointer;
+              margin-left:105px;
+              
+            
+            }
+            
+            .btn-light
+             
+            {
+             height: 40px;
+             margin-top: 10px;
+             }
+             #login-button{
+               margin-left: 82%;
+             }
+             .btn-info{
+                color:black;
+                text-decoration: none;
+                position: absolute;
+                top: 15px;
+                left: 30px; }
+                #star{
+                  color: orange;
+                  }
+            
+              
+                  .carousel-control-prev-icon:after {
+                    content: '<';
+                    font-size: 55px;
+                    color: rosybrown;
+                  }
+                  .carousel-control-next-icon:after {
+                 content: '>';
+                    font-size: 55px;
+                    color: rosybrown; }
+                    .carousel-inner img{
+                      height: 349px;
+                      width: 500px;
+                    }
+                  }            
+
+                  @media screen and (max-width: 576px) {
+                    html,body {
+                      margin: 0;
+                      height:0;
+                      padding: 0;
+                      height: 100%;
+                      width: 100%;
+                      background-color: #e0e0e0;
+                   font-family: Ubuntu ,sans-serif;font-size: 15px;
+                      
+                      }
+                      .con {
+                        height: 100%;
+                        background-color: #e0e0e0;
+                        position:relative;
+                         }
+                        
+                      
+                        .header img {
+                            height: 60px;
+                            width: 60px;
+                            }
+           .description{
+                            margin-top: 6%;
+                            margin-left: 4%;
+                            margin-right: 4%; 
+                            margin-bottom: 1%;
+                        }
+                        
+                            
+                        .header{
+                          background-color:rosybrown;
+                          width: 100%;
+                          height:63px;
+                          position: sticky;
+                          display: flex;
+                          flex-direction: row;
+                          z-index: 1;
+                      
+                          }
+                          footer{
+                          background-color:rosybrown;
+                          margin-top: 260px;
+                          width: 100%;
+                          height: 63px;
+                          position: sticky;
+                          bottom:0px;
+                          
+                          }
+                      
+                              .social-media-icon{
+                                  margin-top:4%;
+                                  float: right;
+                                  margin-right:30px;
+                                } 
+                                footer #c1{
+                                  color:black;
+                                  text-decoration: none;
+                                  position: absolute;
+                                  top: 15px;
+                                  left: 15px;
+                                  }
+                              
+                                  footer p{
+                                      color:black;
+                                      text-decoration: none;
+                                      position: absolute;
+                                      top: 25px;
+                                      left:28%;
+                                      font-size:10px;}
+                      
+                                      
+                     
+                      #form{
+                        padding-top: 4%;
+                        width: 350px;
+                        height:286px;
+                        border-top:1px black solid;
+
+                        
+                      }
+                      .form{
+                        position:absolute;
+                        top:57.5%;
+                        left:-7%;
+                        width:350px;
+                        border-top:1px black solid;
+                   
+                      
+                      }
+                      
+                      .boxx{
+                        border:2px solid black;
+                        border-bottom:none;
+                        width: 100%;
+                        height: 300px;
+
+                      }
+                      
+                      .form label{
+                        display: inline-block;
+                        width: 100px;
+                        padding:2%;
+                      }
+                      input {
+                        margin-top: 10%;
+                        margin-bottom:15px;
+                      display: inline;  
+                       }
+                        input[type="date"]{
+                        width:180px;
+                      }
+                      
+                      .box1{
+                        
+                   height:596px;
+                        border:1px solid black;
+                        width:98%;
+                        margin-left: 2%;
+                        margin-right: 2%;
+
+                        margin-top:2%;
+                      
+                        }
+                        .content img{
+                          
+                            width: 450px;
+                            max-height: 300px;
+                            margin: 0% 0% 0% ;
+                          
+                        }
+                      .content img{
+                          flex-grow:0;
+                          flex-shrink:0;
+                          }
+                        .carousel-item{
+                          text-align: center;
+                          }
+                      .form .btn-outline-success{
+                        text-decoration: none;
+                        cursor: pointer;
+                        margin-left:105px;
+                        
+                      
+                      }
+                      
+                      .btn-light
+                       
+                      {
+                       height: 40px;
+                       margin-top: 10px;
+                       }
+                       #login-button{
+                         margin-left: 65%;
+                       }
+                       .btn-info{
+                          color:black;
+                          text-decoration: none;
+                          position: absolute;
+                          top: 15px;
+                          left: 15px; }
+                          #star{
+                            color: orange;
+                            }
+                      
+                        
+                            .carousel-control-prev-icon:after {
+                              content: '<';
+                              font-size: 55px;
+                              color: rosybrown;
+                            }
+                            .carousel-control-next-icon:after {
+                           content: '>';
+                              font-size: 55px;
+                              color: rosybrown; }
+                              .carousel-inner img{
+                                height: 349px;
+                                width: 500px;
+                              }
+                            }
