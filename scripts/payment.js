@@ -47,3 +47,4 @@ let payNow = e => {
     e.preventDefault();
     alert('Hi your booking is successfull!');
 };
+//project completed
