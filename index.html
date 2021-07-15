@@ -1,68 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="styles/common.css" />
-	<link rel="stylesheet" href="styles/index.css" />
-	<script src="./scripts/common.js" defer></script>
-	<script src="./scripts/index.js" defer></script>
-	<title>Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-	<div id="main">
-		<div class="loader"></div>
-		<header> <img id="logo" src="/assests/images/logo.png" alt="logo" />
-			<button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal"> Login </button>
-		</header>
-		<header id="header"></header>
-		<main>
-			<section>
-				<form class="city-search" action="">
-					<input type="text" placeholder="City" autocomplete="off" /> </form>
-				<div class="city-cards">
-					<a href="list.html">
-						<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi" />
-							<div class="overlay">Delhi</div>
-						</div>
-					</a>
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa" />
-						<div class="overlay">Goa</div>
-					</div>
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad" />
-						<div class="overlay">Hyderabad</div>
-					</div>
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata" />
-						<div class="overlay">Kolkata</div>
-					</div>
-				</div>
-				<div class="city-cards" id="extra-cards">
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" alt="Chennai" />
-						<div class="overlay">Chennai</div>
-					</div>
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" alt="Agra" />
-						<div class="overlay">Agra</div>
-					</div>
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg" alt="Jaipur" />
-						<div class="overlay">Jaipur</div>
-					</div>
-					<div class="image-container"> <img class="city-images" src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg" alt="Bengaluru" />
-						<div class="overlay">Bengaluru</div>
-					</div>
-				</div>
-				<p> <a class="btn btn-secondary" href="#" id="view-more">View More>></a> </p>
-			</section>
-		</main>
-		<footer id="footer"></footer>
-	</div>
-	<div class="modal fade" id="loginModal" tabindex="-1"></div>
-	<div class="modal fade" id="contactModal" tabindex="-1"></div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <div id="loader"></div>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header-footer" id="header"></header>
+
+        <!-- Content -->
+        <div id="index-container">
+            <div id="banner">
+                <!--Search Bar-->
+                <div id="search-bar">
+                    <form autocomplete="off">
+                        <input id="search-input" type="text" placeholder="City" />
+                    </form>
+                </div>
+            </div>
+
+            <!--City Cards-->
+            <div class="city-cards">
+                <div class="city-card-and-name-inner">
+                    <a href="list.html?city=Delhi">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
+                            class="city-image">
+                        <div class='overlay'><span>Delhi</span></div>
+                    </a>
+                </div>
+
+                <div class="city-card-and-name-inner">
+                    <a href="list.html?city=Goa">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg"
+                            class="city-image">
+                        <div class='overlay'><span>Goa</span></div>
+                    </a>
+                </div>
+
+                <div class="city-card-and-name-inner">
+                    <a href="list.html?city=Hyderabad">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg"
+                            class="city-image">
+                        <div class='overlay'><span>Hyderabad</span></div>
+                    </a>
+                </div>
+
+                <div class="city-card-and-name-inner">
+                    <a href="list.html?city=Kolkata">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
+                            class="city-image">
+                        <div class='overlay'><span>Kolkata</span></div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="view-more-city-cards">
+                <div class="city-cards">
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Chennai">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
+                                class="city-image">
+                            <div class='overlay'><span>Chennai</span></div>
+                        </a>
+                    </div>
+
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Agra">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg"
+                                class="city-image">
+                            <div class='overlay'><span>Agra</span></div>
+                        </a>
+                    </div>
+
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Jaipur">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
+                                class="city-image">
+                            <div class='overlay'><span>Jaipur</span></div>
+                        </a>
+                    </div>
+
+                    <div class="city-card-and-name-inner">
+                        <a href="list.html?city=Bengaluru">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
+                                class="city-image">
+                            <div class='overlay'><span>Bengaluru</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="view-more">
+                <button id="view-more-button" type="button" class="btn btn-secondary" onclick="viewMore()">View
+                    More</button>
+            </a>
+        </div>
+
+        <!-- Footer-->
+        <footer class="header-footer" id="footer"></footer>
+    </div>
+
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

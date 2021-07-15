@@ -1,90 +1,154 @@
-// header template
-const HEADER_TEMPLATE = `<a><img id="logo" src="/assests/images/logo.png" alt="logo" /></a>
-<button id="login-button" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>`;
-const HEADER = document.querySelector("#header");
-HEADER.innerHTML = HEADER_TEMPLATE;
+let disableLoader = () => {
+    document.getElementById("loader").style.visibility = "hidden";
+    document.getElementsByTagName("body")[0].style.visibility = "visible";
+}
+
+let displayLoader = () => {
+    document.getElementsByTagName("body")[0].style.visibility = "hidden";
+    document.getElementById("loader").style.visibility = "visible";
+}
+
+// The header template
+let displayHeaderTemplate = () => {
+    let headerTemplate = `<a href="index.html" class="logo">
+        <img src="assests/images/logo.png" id="logo-image" alt="logo"/>
+    </a>
+    <button type="button" id="login" class="btn btn-light btn-sm" data-toggle="modal" data-backdrop="false" data-target="#login-modal" onclick="mainLogin(event)">LOGIN</button>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login-modal-label">Please Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="login-field">
+                            <label for="username">Username: </label>
+                            <input type="text" id="username" name="username" placeholder="Enter Username" required />
+                        </div>
+                        <div class="login-field">
+                            <label for="password">Password: </label>
+                            <input type="password" id="password" name="password" placeholder="Enter Password" required />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="login-button" type="button" class="btn btn-primary" data-dismiss="modal" onclick="login(event)">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>`;
+
+    document.getElementById('header').innerHTML += headerTemplate;
+};
+
+// The footer template
+let displayFooterTemplate = () => {
+    let footerTemplate = `<div id="contact">
+        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false" data-target="#contact-modal">Contact Us</button>
+        
+        <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="contact-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contact-modal-label">Get in touch</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p>
+                                Thank you for reaching out!!! <br>
+                                Please enter you email and we will get back to you.
+                            </p>
+                            <label for="email">Email: </label>
+                            <input type="text" id="email" name="email" placeholder="Enter your email id" required>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright-text">
+        © 2020 ROOM SEARCH PVT. LTD.
+    </div>
+    <div id="social-media-images">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="assests/images/facebook.png" class="social-media-image">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="assests/images/instagram.png" class="social-media-image">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="assests/images/twitter.png" class="social-media-image">
+        </a>
+    </div>`;
+
+    document.getElementById('footer').innerHTML += footerTemplate;
+};
+
+displayLoader();
+
+displayHeaderTemplate();
+displayFooterTemplate();
+
+let mainLogin = e => {
+    if (localStorage.getItem('isLogin') === 'true') {
+        localStorage.setItem('isLogin', 'false');
+        location.reload();
+    }
+};
+
+let login = e => {
+
+    localStorage.setItem('username', 'admin');
+    localStorage.setItem('password', 'admin');
+
+    localStorage.setItem('isLogin', 'false');
+
+    e.preventDefault();
+    let userElement = document.getElementById('username');
+    let passwordElement = document.getElementById('password');
+
+    if (
+        userElement.value === localStorage.getItem('username') &&
+        passwordElement.value === localStorage.getItem('password')
+    ) {
+        localStorage.setItem('isLogin', 'true');
+        alert('Successfully logged in!');
+        let loginElement = document.getElementById('login')
+        loginElement.dataset.target = '';
+        loginElement.innerText = 'LOGOUT';
+        location.reload();
+    } else {
+        alert('Incorrect credentials! Login failed!');
+
+        userElement.value = '';
+        passwordElement.value = '';
+    }
+};
+
+let isLogin = localStorage.getItem('isLogin');
+let loginElement = document.getElementById('login');
 
 
+let checkLogin = () => {
+    if (!isLogin || isLogin === 'false') {
+        localStorage.clear();
+        loginElement.dataset.target = '#login-modal';
+        loginElement.innerText = 'LOGIN';
+    } else if (isLogin === 'true') {
+        loginElement.dataset.target = '';
+        loginElement.innerText = 'LOGOUT';
+    }
+}
 
-const  FOOTER_TEMPLATE = `<button type="button" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#contactModal">Contact us</button>
-<span>© 2020 ROOM SEARCH PVT. LTD.</span>
-<span class="social-icons-container">
-  <a href="https://www.facebook.com" target="_blank"><img src="./assests/images/facebook.png" alt="Facebook icon" class="social-icons"/></a>
-  <a href="https://www.instagram.com" target="_blank"><img src="./assests/images/instagram.png" alt="Instagram icon" class="social-icons"/></a>
-  <a href="https://twitter.com" target="_blank"><img src="./assests/images/twitter.png"  alt="Twitter icon" class="social-icons"/></a>
-</span>`;
-
-const Footer = document.querySelector("#footer")
-Footer.innerHTML=FOOTER_TEMPLATE;
-
-// LOGIN MODAL ADDING (FIRSTLY HEADER AND FOOTER WILL ADDED AFTER ADDING THE LOGIN MODAL WILL LOAD )
-// The "Trigger" part:
-
-// To trigger the modal window, you need to use a button or a link.
-
-// Then include the two data-* attributes:
-
-// data-toggle="modal" opens the modal window
-// data-target="#myModal" points to the id of the modal
-// The .modal class identifies the content of <div> as a modal and brings focus to it
-// The .fade class adds a transition effect which fades the modal in and out. Remove this class if you do not want this effect..
-const LOGIN_MODAL_TEMPLATE = `
-<div class="modal-dialog">
-	<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title">Please Login</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-		</div>
-		<div class="modal-body">
-			<form id="login-form">
-				<div class="container w-75 mx-auto">
-					<div class="row mb-3 justify-content-between">
-						<label for="username" class="col-sm-2 col-form-label">Username:</label>
-						<div class="col-sm-8">
-							<input type="text" class="form-control" id="username" placeholder="Enter Username" required autocomplete="on" /> </div>
-					</div>
-					<div class="row mb-3 justify-content-between">
-						<label for="inputPassword3" class="col-sm-3 col-form-label">Password:</label>
-						<div class="col-sm-8 ml-auto">
-							<input type="password" class="form-control" id="password" autocomplete="off" placeholder="Enter Password" required /> </div>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<button type="Submit" class="btn btn-primary m-auto" form="login-form" id="login-submit"> Login </button>
-		</div>
-	</div>
-</div>
-`;
-const LOGIN_MODAL = document.querySelector("#loginModal");
-LOGIN_MODAL.innerHTML = LOGIN_MODAL_TEMPLATE;
-
-
-/* CONTACT MODAL TEMPLATE */ 
-const CONTACT_MODAL_TEMPLATE = `<div class="modal-dialog">
-	<div class="modal-content">
-		<form method="GET" action="index.html">
-			<div class="modal-header">
-				<h5 class="modal-title">Get in touch</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-			</div>
-			<div class="modal-body">
-				<div class="container">
-					<p>Thank you for reaching out!!!</p>
-					<p>Please enter your email and we'll get back to you.</p>
-					<div class="row mb-2">
-						<label for="email" class="col-sm-2 col-form-label mr-1">Email:</label>
-						<div class="col-sm-8">
-							<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email id" required autocomplete="off" /> </div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="Submit" class="btn btn-primary ml-auto"> Submit </button>
-			</div>
-		</form>
-	</div>
-</div>`; 
-const CONTACT_MODAL = document.querySelector("#contactModal");
- CONTACT_MODAL.innerHTML = CONTACT_MODAL_TEMPLATE;
+checkLogin();
